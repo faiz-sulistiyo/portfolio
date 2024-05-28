@@ -1,8 +1,11 @@
+import { Spinner } from '@/components'
 import { SectionAbout, SectionHome, SectionProject } from '@/sections'
 import { Tables } from '@/types/supabase'
 import React from 'react'
 
-export type Project = Tables<"projects">
+export type Project = Tables<"projects"> & {
+    project_images: Tables<"project_images">[]
+}
 export type About = Tables<"about">
 export type Socmed = {
     instagram: string | null
