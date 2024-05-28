@@ -28,6 +28,10 @@ export const metadata: Metadata = {
       alt: "Faiz Sulistiyo",
     },
   },
+  other: {
+    name: "google-site-verification",
+    content: "ewawsLX9_9TZyMFjdeqxxGSWXpYSk6vUaAgtwwqakFE",
+  },
 }
 
 export default async function RootLayout({
@@ -45,12 +49,6 @@ export default async function RootLayout({
   }
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="S_VGOkxk99-pqguiiziYxKVAuzl7-6KHcmgvw4LwnVM"
-        />
-      </Head>
       <body className={`${inter.className}`}>
         <AosInit />
         <Header resume={about.resume} />
