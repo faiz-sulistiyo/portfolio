@@ -6,7 +6,6 @@ import {Footer, Header} from "@/components"
 import {supabase} from "@/libs/supabase"
 import {notFound} from "next/navigation"
 import {AosInit} from "@/libs/Aos"
-import Head from "next/head"
 
 const inter = Inter({subsets: ["latin"], display: "swap"})
 export const revalidate = Number(process.env.NEXT_REVALIDATE_INTERVAL ?? 0)
@@ -28,10 +27,9 @@ export const metadata: Metadata = {
       alt: "Faiz Sulistiyo",
     },
   },
-  other: {
-    name: "google-site-verification",
-    content: "ewawsLX9_9TZyMFjdeqxxGSWXpYSk6vUaAgtwwqakFE",
-  },
+  other:{
+    "google-site-verification": "S_VGOkxk99-pqguiiziYxKVAuzl7-6KHcmgvw4LwnVM"
+  }
 }
 
 export default async function RootLayout({
