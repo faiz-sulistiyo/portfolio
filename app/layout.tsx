@@ -5,7 +5,8 @@ import "aos/dist/aos.css"
 import {Footer, Header} from "@/components"
 import {supabase} from "@/libs/supabase"
 import {notFound} from "next/navigation"
-import { AosInit } from "@/libs/Aos"
+import {AosInit} from "@/libs/Aos"
+import Head from "next/head"
 
 const inter = Inter({subsets: ["latin"], display: "swap"})
 export const revalidate = Number(process.env.NEXT_REVALIDATE_INTERVAL ?? 0)
@@ -44,6 +45,12 @@ export default async function RootLayout({
   }
   return (
     <html lang="en">
+      <Head>
+        <meta
+          name="google-site-verification"
+          content="S_VGOkxk99-pqguiiziYxKVAuzl7-6KHcmgvw4LwnVM"
+        />
+      </Head>
       <body className={`${inter.className}`}>
         <AosInit />
         <Header resume={about.resume} />
