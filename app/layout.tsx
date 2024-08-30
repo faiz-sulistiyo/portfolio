@@ -6,6 +6,7 @@ import {Footer, Header} from "@/components"
 import {supabase} from "@/libs/supabase"
 import {notFound} from "next/navigation"
 import {AosInit} from "@/libs/Aos"
+import GoogleAnalytics from "@/components/GoogleAnalytics"
 
 const inter = Inter({subsets: ["latin"], display: "swap"})
 export const revalidate = Number(process.env.NEXT_REVALIDATE_INTERVAL ?? 0)
@@ -47,6 +48,7 @@ export default async function RootLayout({
   }
   return (
     <html lang="en">
+      <GoogleAnalytics/>
       <body className={`${inter.className}`}>
         <AosInit />
         <Header resume={about.resume} />
